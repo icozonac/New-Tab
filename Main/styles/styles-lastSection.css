@@ -1,0 +1,72 @@
+/* general */
+.link,
+.todo {
+  cursor: pointer;
+  color: rgb(183, 183, 183);
+}
+.link:hover,
+.todo:hover {
+  color: white;
+}
+
+/* quotes */
+.quotes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 70%;
+}
+
+#switcher {
+  cursor: pointer;
+  opacity: 0;
+}
+.quotes-container:hover #switcher {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+.quotes {
+  max-width: 95%;
+}
+
+/* Links style */
+.dropup-content {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  z-index: 1;
+  display: none;
+
+  background-color: black;
+  border-radius: 10px;
+  max-height: 20rem;
+  width: 15rem;
+  padding: 20px 20px;
+  overflow-y: auto;
+}
+.dropup-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+a,
+i {
+  text-decoration: none;
+  color: rgb(183, 183, 183);
+}
+a:hover,
+i:hover,
+.nwlink:hover {
+  color: white;
+}
+.nwlink {
+  color: rgb(122, 122, 122);
+  cursor: pointer;
+}

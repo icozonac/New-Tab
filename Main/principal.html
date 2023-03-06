@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="principal.css" />
+    <link rel="stylesheet" href="styles/styles-middleSection.css" />
+    <link rel="stylesheet" href="styles/styles-headerSection.css" />
+    <link rel="stylesheet" href="styles/styles-lastSection.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="/Favicon/3602601.png" />
+    <title>New Tab</title>
+  </head>
+  <body>
+    <div id="bg" class="bg">
+      <header class="header">
+        <div class="focus-container" id="thisdiv"></div>
+        <div class="weather-container">
+          <div id="location"></div>
+          <div class="icon-temp-div">
+            <div id="icon"></div>
+            <div id="temperature"></div>
+          </div>
+        </div>
+      </header>
+
+      <div class="central-container">
+        <form action="https://google.com/search">
+          <span id="datetime"></span>
+          <input id="inputG" type="text" name="q" autocomplete="off" />
+          <p id="say"></p>
+          <p id="email"></p>
+        </form>
+      </div>
+
+      <div class="last-section">
+        <div class="dropup">
+          <p class="link">Link</p>
+          <div class="dropup-content">
+            <div class="dropup-elements">
+              <a href="chrome-search://local-ntp/local-ntp.html"
+                ><i class="fa fa-chrome"></i> Chrome Tab</a
+              >
+
+              <span class="nwlink">+ New Link</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="quotes-container">
+          <p class="quotes"></p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            id="switcher"
+            fill="currentColor"
+            class="bi bi-arrow-up-right-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"
+            />
+          </svg>
+        </div>
+
+        <div class="todo">Todo</div>
+      </div>
+    </div>
+
+    <script src="js/centralApp.js"></script>
+    <script src="js/headerApp.js"></script>
+    <script src="js/lastSectionApp.js"></script>
+    <script src="./principal.js"></script>
+  </body>
+</html>

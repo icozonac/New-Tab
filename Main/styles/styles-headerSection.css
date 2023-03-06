@@ -1,0 +1,96 @@
+.focus-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+  height: 75px;
+  font-size: 18px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 5px;
+}
+
+input {
+  border: none;
+  background: transparent;
+  color: white;
+
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+
+  outline: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+input:focus {
+  box-shadow: 0 4px 2px -2px rgb(53, 53, 53);
+}
+
+/* widget */
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.icon-temp-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#location {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#icon {
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+#temperature {
+  font-size: 24px;
+  font-weight: bold;
+}
+/*  */
+.container-compl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+}
+.todayInput {
+  overflow: hidden;
+  text-align: center;
+  max-width: 90%;
+}
+#today {
+  font-weight: bold;
+}
+
+#delete {
+  opacity: 0;
+  cursor: pointer;
+}
+.complete {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  accent-color: #282930;
+}
+
+.focus-container:hover .complete,
+.focus-container:hover #delete {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}

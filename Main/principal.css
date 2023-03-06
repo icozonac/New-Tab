@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  letter-spacing: 0.5px;
+  color: white ;
+
+}
+.bg {
+  opacity: 0.9;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 120px;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
+.central-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
+.last-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 100px;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+  font-size: 16px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

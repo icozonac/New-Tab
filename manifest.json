@@ -1,0 +1,15 @@
+{
+    "name" : "New Tab",
+    "version": "1.0.0",
+
+    "description": "This extension replaces the new tab page with a simple page that displays the current time and date.",
+    "permissions": ["storage"],
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    },
+    "manifest_version": 3,
+    "author": "Cozonac Ion"
+    
+    
+    
+}

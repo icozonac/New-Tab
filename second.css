@@ -1,0 +1,83 @@
+#divForButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+}
+.twoButton {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.twoButton:hover {
+  background-color: rgba(180, 171, 171, 0.123);
+}
+#question {
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+#divChangeName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  position: absolute;
+  bottom: 20px;
+}
+#changeNameInp {
+  all: initial;
+  background-color: rgb(59, 59, 59);
+  color: white;
+  font-family: "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  line-height: normal;
+  text-align: center;
+  outline: none;
+  width: 15rem;
+  font-size: 20px;
+  height: 40px;
+  border-radius: 5px;
+}
+#changeNameInp:focus {
+  box-shadow: inset 0px 0px 0px 1px rgb(206, 1, 1);
+}
+#changeNameBtn {
+  background-color: rgb(207, 13, 13);
+  border: none;
+  font-size: 15px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  margin-left: 10px;
+  cursor: pointer;
+}
+#changeNameBtn:hover {
+  box-shadow: inset 0px 0px 0px 1px rgb(59, 59, 59);
+  background-color: rgb(255, 4, 4);
+}
+#pInvalidEmail {
+  margin-top: 15px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  max-width: 37rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
