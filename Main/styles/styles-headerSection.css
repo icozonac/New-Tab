@@ -12,7 +12,7 @@
   padding-top: 5px;
 }
 
-input {
+#main-focus {
   border: none;
   background: transparent;
   color: white;
@@ -26,6 +26,17 @@ input {
 }
 input:focus {
   box-shadow: 0 4px 2px -2px rgb(53, 53, 53);
+}
+#delete {
+  opacity: 0;
+  cursor: pointer;
+}
+.complete {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  accent-color: #282930;
 }
 
 /* widget */
@@ -64,7 +75,7 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   height: 100%;
   width: 100%;
 }
@@ -75,18 +86,6 @@ input:focus {
 }
 #today {
   font-weight: bold;
-}
-
-#delete {
-  opacity: 0;
-  cursor: pointer;
-}
-.complete {
-  cursor: pointer;
-  width: 15px;
-  height: 15px;
-  opacity: 0;
-  accent-color: #282930;
 }
 
 .focus-container:hover .complete,
