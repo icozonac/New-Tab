@@ -1,1 +1,2 @@
-if (localStorage.getItem("Email")) window.location = "/Main/principal.html";
+if (localStorage.getItem("Email") && localStorage.getItem("Name"))
+  window.location = "/Main/principal.html";

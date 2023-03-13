@@ -4,7 +4,7 @@ link.type = "text/css";
 link.href = "second.css";
 document.head.appendChild(link);
 
-window.addEventListener("load", function () {
+setTimeout(() => {
   const newForm = document.createElement("form");
   document.getElementById("bg").appendChild(newForm);
   newForm.style.opacity = 0;
@@ -125,4 +125,10 @@ window.addEventListener("load", function () {
       }
     }
   }
-});
+  input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      btnContinue.dispatchEvent(new Event("click"));
+    }
+  });
+}, 300);

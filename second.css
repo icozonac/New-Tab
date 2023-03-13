@@ -76,7 +76,8 @@
   margin-top: 15px;
   font-size: 18px;
   color: rgb(255, 255, 255);
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   max-width: 37rem;
   overflow: hidden;
   text-overflow: ellipsis;

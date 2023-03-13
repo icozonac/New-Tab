@@ -14,9 +14,7 @@ switch (random) {
 }
 ///Check if the user is logged in
 
-if (localStorage.getItem("Email")) {
-  window.location = "/Main/principal.html";
-} else if (localStorage.getItem("Name")) {
+if (localStorage.getItem("Name")) {
   document.getElementById("main-container").remove();
   var el = document.createElement("script");
   el.src = "second.js";
@@ -58,5 +56,12 @@ if (localStorage.getItem("Email")) {
       element.style.filter = "alpha(opacity=" - x / 100 - ")";
     }
     var t = setInterval(Visible, 50);
+  });
+  input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const value = e.target.value;
+      if (value.length > 2) button.dispatchEvent(new Event("click"));
+    }
   });
 }

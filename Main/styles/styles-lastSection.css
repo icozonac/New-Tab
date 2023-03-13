@@ -138,3 +138,8 @@ li {
   margin-bottom: 10px;
   font-size: large;
 }
+.complete {
+  color: rgba(192, 192, 192, 0.8);
+  text-decoration: line-through;
+}
+

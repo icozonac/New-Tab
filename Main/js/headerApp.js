@@ -26,6 +26,7 @@ function change(input) {
 
   btnDeleteToday.addEventListener("click", () => {
     localStorage.removeItem("Today");
+    localStorage.removeItem("checkbox");
     changeInitial();
   });
 
@@ -38,9 +39,11 @@ function change(input) {
     if (btnCheckbox.checked == true) {
       todayInput.style.textDecoration = "line-through";
       todayInput.style.opacity = "0.5";
-    } else {
+      localStorage.setItem("checkbox", "true");
+    } else if (btnCheckbox.checked == false) {
       todayInput.style.textDecoration = "none";
       todayInput.style.opacity = "1";
+      localStorage.setItem("checkbox", "false");
     }
   });
 }
@@ -79,9 +82,16 @@ if (!localStorage.getItem("Today")) {
   });
 } else {
   change(localStorage.getItem("Today"));
+  if (localStorage.getItem("checkbox") == "true") {
+    const btnCheckbox = document.getElementById("checkbox");
+    const todayInput = document.querySelector(".todayInput");
+    btnCheckbox.checked = true;
+    todayInput.style.textDecoration = "line-through";
+    todayInput.style.opacity = "0.5";
+  }
 }
 //weather
-const API_KEY = "e95ea60737e584023835c77b1620ee9a";
+const API_KEY = "1cb74a988a52850c4c8407f1aa9e74a6";
 const weatherWidget = document.getElementById("weather-widget");
 const locationElement = document.getElementById("location");
 const iconElement = document.getElementById("icon");
