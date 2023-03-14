@@ -119,7 +119,7 @@ async function successCallback(position) {
     locationElement.innerHTML = location;
     temperatureElement.innerHTML = `${Math.trunc(temperatureCelsius)}°C`;
     iconElement.style.backgroundImage = `url(http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png)`;
-    console.log(data);
+    // console.log(data);
   } catch (error) {
     console.log("sa produs eroare: ", error);
   }
@@ -130,7 +130,7 @@ function errorCallback(error) {
 }
 
 // call the getWeatherData() function when the page loads
-window.onload = getWeatherData;
+window.onload = getWeatherData();
 
 // refresh the weather data every 10 minutes
 setInterval(getWeatherData, 600000);
