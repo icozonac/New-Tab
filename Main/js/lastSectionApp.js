@@ -97,6 +97,25 @@ function loadTasks() {
         localStorage.setItem("tasks", JSON.stringify(filteredTasks));
         li.remove();
       });
+
+      const checkbox = li.querySelector(".checkbox");
+      if (task.completed) {
+        li.classList.add("completed");
+        checkbox.checked = true;
+      }
+      //add event listener for checkbox
+
+      checkbox.addEventListener("click", () => {
+        const taskText = li.querySelector("span").textContent;
+        const tasks = JSON.parse(localStorage.getItem("tasks"));
+        tasks.forEach((task) => {
+          if (task.task === taskText) {
+            task.completed = !task.completed;
+          }
+        });
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        li.classList.toggle("completed");
+      });
     });
   }
 }
@@ -109,6 +128,15 @@ function addTask() {
     alert("Please add some task!");
     return false;
   }
+  // check is task already exist
+  let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  // task already exist
+  if (tasks.some((taskItem) => taskItem.task === task.value)) {
+    alert("Task already exist!");
+    task.value = "";
+    return false;
+  }
+
   // add task to local storage
   localStorage.setItem(
     "tasks",
@@ -156,6 +184,19 @@ function addTask() {
     const filteredTasks = tasks.filter((task) => task.task !== taskText);
     localStorage.setItem("tasks", JSON.stringify(filteredTasks));
     li.remove();
+  });
+  //add event listener for checkbox
+  const checkbox = li.querySelector(".checkbox");
+  checkbox.addEventListener("click", () => {
+    const taskText = li.querySelector("span").textContent;
+    const tasks = JSON.parse(localStorage.getItem("tasks"));
+    tasks.forEach((task) => {
+      if (task.task === taskText) {
+        task.completed = !task.completed;
+      }
+    });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    li.classList.toggle("completed");
   });
 }
 
