@@ -37,6 +37,7 @@
   left: 10px;
   z-index: 5;
   display: none;
+  overflow: hidden;
 
   background-color: rgba(0, 0, 0, 0.756);
   border-radius: 10px;
@@ -45,6 +46,7 @@
   padding: 20px;
   overflow-y: auto;
 }
+
 .dropup-elements {
   display: flex;
   flex-direction: column;
@@ -56,6 +58,25 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+
+.page-0 {
+  display: block;
+}
+
+.page-1 {
+  animation: slide-from-right 1s ease-in-out forwards;
+  display: none;
+}
+
+@keyframes slide-from-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 a,
 i {
   text-decoration: none;

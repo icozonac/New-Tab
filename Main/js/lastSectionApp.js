@@ -17,29 +17,48 @@ const dropupLink = document.querySelector(".link");
 const dropupMenu = document.querySelector(".dropup-content");
 const addNewLink = document.querySelector(".nwlink");
 
+function setPage(pageNumber) {
+  const pageElement = document.querySelector(`.page-${pageNumber}`);
+  pageElement.style.display = "block";
+
+  const pages = document.querySelectorAll(".dropup-elements");
+  pages.forEach((page) => {
+    if (page !== pageElement) {
+      page.style.display = "none";
+    }
+  });
+}
+
 dropupMenu.style.display = "none";
 
 dropupLink.addEventListener("click", () => {
   if (dropupMenu.style.display === "none") {
     dropupMenu.style.display = "block";
     dropupLink.style.color = "white";
+
+    addNewLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      setPage(1);
+    });
   } else {
     dropupMenu.style.display = "none";
     dropupLink.style.color = "rgb(183, 183, 183)";
+    setPage(0);
   }
 });
 
-window.addEventListener("click", (event) => {
-  if (!event.target.matches(".link")) {
-    dropupMenu.style.display = "none";
-    dropupLink.style.color = "rgb(183, 183, 183)";
-  }
-});
+// window.addEventListener("click", (event) => {
+//   if (!event.target.matches(".link")) {
+//     dropupMenu.style.display = "none";
+//     dropupLink.style.color = "rgb(183, 183, 183)";
+//   }
+// });
 
 ///////////////Todo
 const dropupTodo = document.querySelector(".todo");
 const dropupTodoMenu = document.querySelector(".dropup-todo");
 const addNewTodo = document.getElementById("inputTodo");
+const input = document.getElementById("inputTodo");
 
 dropupTodoMenu.style.display = "none";
 
@@ -47,6 +66,7 @@ dropupTodo.addEventListener("click", () => {
   if (dropupTodoMenu.style.display === "none") {
     dropupTodoMenu.style.display = "block";
     dropupTodo.style.color = "white";
+    input.focus();
   } else {
     dropupTodoMenu.style.display = "none";
     dropupTodo.style.color = "rgb(183, 183, 183)";
@@ -200,7 +220,6 @@ function addTask() {
   });
 }
 
-const input = document.getElementById("inputTodo");
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     addTask();
