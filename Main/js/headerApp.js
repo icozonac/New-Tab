@@ -1,5 +1,4 @@
 //Function
-
 function change(input) {
   const focus_container = document.getElementById("thisdiv");
   focus_container.innerHTML =
@@ -92,7 +91,6 @@ if (!localStorage.getItem("Today")) {
 }
 //weather
 const API_KEY = "1cb74a988a52850c4c8407f1aa9e74a6";
-const weatherWidget = document.getElementById("weather-widget");
 const locationElement = document.getElementById("location");
 const iconElement = document.getElementById("icon");
 const temperatureElement = document.getElementById("temperature");

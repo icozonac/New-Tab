@@ -49,18 +49,24 @@
           <p class="link">Links</p>
           <div class="dropup-content">
             <div class="dropup-elements page-0">
-              <a href="chrome-search://local-ntp/local-ntp.html"
+              <a href="chrome-search://local-ntp/local-ntp.html" id="chrome-tab"
                 ><i class="fa fa-chrome"></i> Chrome Tab</a
               >
-
               <span class="nwlink">+ New Link</span>
             </div>
             <div class="dropup-elements page-1">
-              <a href="chrome-search://local-ntp/local-ntp.html"
-                ><i class="fa fa-chrome"></i> Buna ziua</a
-              >
-
-              <span class="nwlink">+ New Link</span>
+              <div class="btn-back">
+                <span>&larr;</span>
+              </div>
+              <div>
+                <label>Name</label>
+                <input type="text" id="new-site" autocomplete="off" />
+              </div>
+              <div>
+                <label>Link</label>
+                <input type="text" id="new-site-link" autocomplete="off" />
+              </div>
+              <button id="btn-add-site">Create</button>
             </div>
           </div>
         </div>
