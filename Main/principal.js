@@ -31,4 +31,3 @@ switch (day) {
       "url(./bg/Darkness/7.jpg)";
     break;
 }
-

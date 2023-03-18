@@ -165,6 +165,28 @@ i:hover,
   color: rgb(122, 122, 122);
   cursor: pointer;
 }
+.delete-link {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  border: none;
+  background-color: #5757576e;
+  cursor: pointer;
+  color: #8d8d8d;
+  transition: 0.2s ease-in-out;
+}
+.delete-link:hover {
+  background-color: #575757;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+.div-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* To do style */
 .dropup-todo {
   position: absolute;

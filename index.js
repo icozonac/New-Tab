@@ -25,6 +25,7 @@ if (localStorage.getItem("Name")) {
   button.style.visibility = "hidden";
 
   const input = document.getElementById("input");
+  input.focus();
   input.addEventListener("input", (e) => {
     const value = e.target.value;
     if (value.length > 2) button.style.visibility = "visible";

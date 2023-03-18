@@ -21,12 +21,26 @@ function loadSites() {
   if (sites !== null) {
     sites = Array.from(sites);
     sites.forEach((site) => {
+      const divLink = document.createElement("div");
+      divLink.classList.add("div-link");
       const link = document.createElement("a");
       link.textContent = site.nameSite;
       link.setAttribute("href", site.site);
+      const deleteLink = document.createElement("button");
+      deleteLink.textContent = "X";
+      deleteLink.classList.add("delete-link");
+      deleteLink.addEventListener("click", () => {
+        const siteText = link.textContent;
+        const sites = JSON.parse(localStorage.getItem("sites"));
+        const newSites = sites.filter((site) => site.nameSite !== siteText);
+        localStorage.setItem("sites", JSON.stringify(newSites));
+        divLink.remove();
+      });
+      divLink.appendChild(link);
+      divLink.appendChild(deleteLink);
       document
         .querySelector(".page-0")
-        .insertBefore(link, document.querySelector(".page-0").firstChild);
+        .insertBefore(divLink, document.querySelector(".page-0").firstChild);
     });
   }
 }
@@ -70,12 +84,27 @@ function addLink() {
     ])
   );
 
+  const divLink = document.createElement("div");
+  divLink.classList.add("div-link");
   const link = document.createElement("a");
   link.textContent = document.getElementById("new-site").value;
   link.setAttribute("href", document.getElementById("new-site-link").value);
+  const deleteLink = document.createElement("button");
+  deleteLink.textContent = "X";
+  deleteLink.classList.add("delete-link");
+  deleteLink.addEventListener("click", () => {
+    const siteText = link.textContent;
+    const sites = JSON.parse(localStorage.getItem("sites"));
+    const newSites = sites.filter((site) => site.nameSite !== siteText);
+    localStorage.setItem("sites", JSON.stringify(newSites));
+    divLink.remove();
+  });
+  divLink.appendChild(link);
+  divLink.appendChild(deleteLink);
+
   document
     .querySelector(".page-0")
-    .insertBefore(link, document.querySelector(".page-0").firstChild);
+    .insertBefore(divLink, document.querySelector(".page-0").firstChild);
 
   site.value = "";
   nameSite.value = "";
