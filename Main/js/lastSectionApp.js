@@ -117,7 +117,7 @@ dropupLink.addEventListener("click", () => {
   if (dropupMenu.style.display === "none") {
     dropupMenu.style.display = "block";
     dropupLink.style.color = "white";
-    //view end of page
+    //view end of div, set scrool to bottom
     dropupMenu.scrollTo(0, document.body.scrollHeight);
 
     addNewLink.addEventListener("click", (e) => {
