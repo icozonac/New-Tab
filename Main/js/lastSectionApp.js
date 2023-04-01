@@ -151,6 +151,15 @@ dropupLink.addEventListener("click", () => {
   }
 });
 
+dropupLink.addEventListener("mouseover", () => {
+  dropupLink.style.color = "white";
+});
+dropupLink.addEventListener("mouseout", () => {
+  if (dropupMenu.style.display === "none") {
+    dropupLink.style.color = "rgb(183, 183, 183)";
+  }
+});
+
 dropupMenu.addEventListener("click", function (event) {
   event.stopPropagation();
 });
@@ -181,6 +190,15 @@ dropupTodo.addEventListener("click", () => {
     dropupTodoMenu.scrollTo(0, document.body.scrollHeight);
   } else {
     dropupTodoMenu.style.display = "none";
+    dropupTodo.style.color = "rgb(183, 183, 183)";
+  }
+});
+
+dropupTodo.addEventListener("mouseover", () => {
+  dropupTodo.style.color = "white";
+});
+dropupTodo.addEventListener("mouseout", () => {
+  if (dropupTodoMenu.style.display === "none") {
     dropupTodo.style.color = "rgb(183, 183, 183)";
   }
 });
